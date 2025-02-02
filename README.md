@@ -66,8 +66,8 @@ Along with the RJCL-specific operations, there are other actions that all workfl
 * GetTask
 * ReadState
 * WriteState
-* TaskStatus
-* JobStatus
+* CheckTaskStatus
+* CheckJobStatus
 
 ## Message Formats
 All work is done by passing messages between parties.
