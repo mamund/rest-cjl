@@ -56,5 +56,32 @@ For web-based APIs, the above operations need to be exposed as affordances. Both
 
 The protocol details (method, media-type, etc.) will be supplied at runtime by the Web server. It is up to the Web client/agent to understand the details of the affordance and to act accordingly. 
 
+### Additional Operations
+Along with the RJCL-specific operations, there are other actions that all workflow-compliant services **MUST** support:
 
-</body>
+* Home
+* GetJobList
+* GetJob
+* GetTaskList
+* GetTask
+* ReadState
+* WriteState
+* TaskStatus
+* JobStatus
+
+## Message Formats
+All work is done by passing messages between parties.
+
+### RJCL Format
+The document that holds job lists
+
+### Job Item Format
+The document that defines/describes a job
+
+### Task Item Format
+The document that defines/describes a task
+
+### Shared State Format
+The document that defines/describes the start state for a job
+
+
