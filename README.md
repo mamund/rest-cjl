@@ -4,6 +4,16 @@ working examples of RESTful job conttrol language
 
 ## Interfaces
 
+### Shared Operations
+The actions composable services need to support are:
+
+* **Execute** : The actual work (_task_) to be done (e.g., applySalesTax).
+* **Repeat** : Repeat the _task_ again in an idempotent manner (e.g., applySalesTax can be safely repeated and still be the same expected results).
+* **Revert** : The ability to undo a completed _task_ (e.g., revertSalesTax).
+* **Continue** : The ability to stop a _job_ and then, after some pause, continue where you left off to complete the work.
+* **Rerun** : The ability to start the _job_ from the beginning and rerun all the steps even if the workflow has been run before.
+* **Cancel** : The ability to cancel a running _job_. This might be due to an error in processing, missing state data, a time-out condition, etc.
+
 ### Service Interface
 Below is the abstract service interface that **all** RJCL workflow-compliant services **MUST** support:
 
