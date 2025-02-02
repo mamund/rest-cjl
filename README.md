@@ -5,8 +5,8 @@ working examples of RESTful job conttrol language
 ## Service Interface
 Below is the abstract service interface that **all** RJCL workflow-compliant services **MUST** support:
 
-```
-const task = {
+```javascript
+const rjcl = {
   executeTask() {
     return true;
   },
@@ -27,3 +27,4 @@ const task = {
   }
 };
 ```
+
